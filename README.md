@@ -1,18 +1,18 @@
 # Alphapp
 
-Alphapp es un proyecto de software que se organiza en torno a dos dominios principales: **alphapp.xyz** y **alphapp.net**.
+Alphapp es un proyecto de software que se organiza en torno a dos dominios principales: **alphapp.xyz** y **alphapp.net**
 
 ## Estructura del Proyecto
 
 ### Dominios Principales
 
-- **alphapp.xyz**: Plataforma central de Alphapp que alberga los servicios principales y funcionalidades de software.
+- **alphapp.xyz**: Plataforma central de Alphapp que alberga los servicios principales y funcionalidades de software
   - `api.alphapp.xyz`: Documentación de la API
   - `cloud.alphapp.xyz`: Servicios en la nube
   - `ml.alphapp.xyz`: Componentes de aprendizaje automático
   - `store.alphapp.xyz`: Tienda de recursos
 
-- **alphapp.net**: Comunidad de desarrolladores y recursos de apoyo.
+- **alphapp.net**: Comunidad de desarrolladores y recursos de apoyo
   - `docs.alphapp.net`: Documentación del proyecto
   - `community.alphapp.net`: Foros y gestión de testers
   - `resources.alphapp.net`: Directorio de recursos
@@ -21,26 +21,26 @@ Alphapp es un proyecto de software que se organiza en torno a dos dominios princ
 
 #### Plataforma Central (alphapp.xyz)
 
-1. **platform**: Código fuente general de la plataforma central.
-2. **platform-frontend**: Código frontend de la plataforma central.
-3. **platform-backend**: Código backend de la plataforma central.
-4. **api-docs**: Documentación de la API.
-5. **cloud-services**: Servicios en la nube.
-6. **ml-components**: Componentes de aprendizaje automático.
+1. **platform**: Código fuente general de la plataforma central
+2. **platform-frontend**: Código frontend de la plataforma central
+3. **platform-backend**: Código backend de la plataforma central
+4. **api-docs**: Documentación de la API
+5. **cloud-services**: Servicios en la nube
+6. **ml-components**: Componentes de aprendizaje automático
 
 #### Comunidad y Recursos (alphapp.net)
 
-1. **community**: Código fuente general de la comunidad y recursos.
-2. **community-frontend**: Código frontend de la comunidad y recursos.
-3. **community-backend**: Código backend de la comunidad y recursos.
+1. **community**: Código fuente general de la comunidad y recursos
+2. **community-frontend**: Código frontend de la comunidad y recursos
+3. **community-backend**: Código backend de la comunidad y recursos
 4. **docs**: Documentación del proyecto.
-5. **community-forums**: Foros de discusión.
-6. **resources**: Directorio de recursos para desarrolladores.
+5. **community-forums**: Foros de discusión
+6. **resources**: Directorio de recursos para desarrolladores
 
 #### Otros Repositorios
 
-1. **scripts**: Scripts de automatización.
-2. **config**: Archivos de configuración.
+1. **scripts**: Scripts de automatización
+2. **config**: Archivos de configuración
 
 ### Estructura de Directorios
 
