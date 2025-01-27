@@ -1,1 +1,14 @@
-
+{
+  "name": "alphapp",
+  "version": "1.0.0",
+  "description": "Descripción del proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fast677",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
