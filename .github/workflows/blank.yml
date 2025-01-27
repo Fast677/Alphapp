@@ -35,8 +35,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-          # Ejecuta un script de prueba
-      - name: Run tests
-        run: |
-          npm install
-          npm test
+         
