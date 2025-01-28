@@ -44,7 +44,7 @@ Alphapp es un proyecto de software que se organiza en torno a dos dominios princ
 
 ### Estructura de Directorios
 
-'''plaintext
+```plaintext
 alphapp/
 ├── src/
 │   ├── platform/
