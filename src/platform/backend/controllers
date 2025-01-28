@@ -1,1 +1,82 @@
+const express = require('express');
+const router = express.Router();
+
+// Importar el modelo necesario
+const Platform = require('../models/platform');
+
+// Obtener todos los elementos
+router.get('/', async (req, res) => {
+  try {
+    const platforms = await Platform.find();
+    res.json(platforms);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Obtener un elemento por ID
+router.get('/:id', getPlatform, (req, res) => {
+  res.json(res.platform);
+});
+
+// Crear un nuevo elemento
+router.post('/', async (req, res) => {
+  const platform = new Platform({
+    name: req.body.name,
+    description: req.body.description
+  });
+
+  try {
+    const newPlatform = await platform.save();
+    res.status(201).json(newPlatform);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Actualizar un elemento
+router.patch('/:id', getPlatform, async (req, res) => {
+  if (req.body.name != null) {
+    res.platform.name = req.body.name;
+  }
+  if (req.body.description != null) {
+    res.platform.description = req.body.description;
+  }
+
+  try {
+    const updatedPlatform = await res.platform.save();
+    res.json(updatedPlatform);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Eliminar un elemento
+router.delete('/:id', getPlatform, async (req, res) => {
+  try {
+    await res.platform.remove();
+    res.json({ message: 'Deleted Platform' });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Middleware para obtener un elemento por ID
+async function getPlatform(req, res, next) {
+  let platform;
+  try {
+    platform = await Platform.findById(req.params.id);
+    if (platform == null) {
+      return res.status(404).json({ message: 'Cannot find platform' });
+    }
+  } catch (err) {
+    return res.status(500).json({ message: err.message });
+  }
+
+  res.platform = platform;
+  next();
+}
+
+module.exports = router;
+
 
