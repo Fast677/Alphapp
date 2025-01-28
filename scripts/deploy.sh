@@ -26,3 +26,5 @@ echo "Reiniciando el servidor..."
 pm2 restart alphapp
 
 echo "Despliegue completado con éxito!"
+
+
