@@ -1,6 +1,6 @@
 # Alphapp
 
-Alphapp es un proyecto de software que se organiza en torno a dos dominios principales: **alphapp.xyz** y **alphapp.net**
+Alphapp es un software que se organiza en torno a dos dominios principales: **alphapp.xyz** y **alphapp.net**
 
 ## Estructura del Proyecto
 
