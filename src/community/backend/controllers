@@ -1,1 +1,82 @@
+const express = require('express');
+const router = express.Router();
+
+// Importar el modelo necesario
+const Community = require('../models/community');
+
+// Obtener todos los elementos
+router.get('/', async (req, res) => {
+  try {
+    const communities = await Community.find();
+    res.json(communities);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Obtener un elemento por ID
+router.get('/:id', getCommunity, (req, res) => {
+  res.json(res.community);
+});
+
+// Crear un nuevo elemento
+router.post('/', async (req, res) => {
+  const community = new Community({
+    name: req.body.name,
+    description: req.body.description
+  });
+
+  try {
+    const newCommunity = await community.save();
+    res.status(201).json(newCommunity);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Actualizar un elemento
+router.patch('/:id', getCommunity, async (req, res) => {
+  if (req.body.name != null) {
+    res.community.name = req.body.name;
+  }
+  if (req.body.description != null) {
+    res.community.description = req.body.description;
+  }
+
+  try {
+    const updatedCommunity = await res.community.save();
+    res.json(updatedCommunity);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Eliminar un elemento
+router.delete('/:id', getCommunity, async (req, res) => {
+  try {
+    await res.community.remove();
+    res.json({ message: 'Deleted Community' });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Middleware para obtener un elemento por ID
+async function getCommunity(req, res, next) {
+  let community;
+  try {
+    community = await Community.findById(req.params.id);
+    if (community == null) {
+      return res.status(404).json({ message: 'Cannot find community' });
+    }
+  } catch (err) {
+    return res.status(500).json({ message: err.message });
+  }
+
+  res.community = community;
+  next();
+}
+
+module.exports = router;
+
 
