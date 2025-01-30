@@ -1,14 +1,29 @@
 {
   "name": "alphapp",
   "version": "1.0.0",
-  "description": "Descripción del proyecto",
+  "description": "Alphapp es una plataforma para desarrolladores que proporciona herramientas y recursos para facilitar el desarrollo, la escalabilidad y el mantenimiento de proyectos de software.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Fast677",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fast677/Alphapp.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Fast677/Alphapp/issues"
+  },
+  "homepage": "https://github.com/Fast677/Alphapp#readme"
 }
