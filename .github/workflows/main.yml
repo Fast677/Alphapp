@@ -1,3 +1,5 @@
+- name: Attest Build Provenance
+  uses: actions/attest-build-provenance@v2.2.0
             - nombre: Configurar Java JDK
   usos: acciones/setup-java@v4.7.0
   con:
