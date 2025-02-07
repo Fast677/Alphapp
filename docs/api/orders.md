@@ -129,4 +129,3 @@ Borra una orden existente.
 
 **Respuesta:**
 Código HTTP: 204 No Content
-```
