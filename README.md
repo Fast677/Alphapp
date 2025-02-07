@@ -1,6 +1,6 @@
 # Alphapp
 
-Alphapp es una plataforma para desarrolladores que proporciona herramientas y recursos para facilitar el desarrollo, la escalabilidad y el mantenimiento de proyectos de software,
+Alphapp es una plataforma para desarrolladores que proporciona herramientas y recursos para facilitar el desarrollo, la escalabilidad y el mantenimiento de proyectos de software.
 
 ## Estructura del Proyecto
 
@@ -33,7 +33,7 @@ Alphapp es una plataforma para desarrolladores que proporciona herramientas y re
 1. **community**: Código fuente general de la comunidad y recursos
 2. **community-frontend**: Código frontend de la comunidad y recursos
 3. **community-backend**: Código backend de la comunidad y recursos
-4. **docs**: Documentación del proyecto.
+4. **docs**: Documentación del proyecto
 5. **community-forums**: Foros de discusión
 6. **resources**: Directorio de recursos para desarrolladores
 
@@ -57,6 +57,11 @@ alphapp/
 │   │   │   ├── routes/
 │   │   │   ├── tests/
 │   │   │   └── ...
+│   │   ├── mobile/
+│   │   │   ├── android/
+│   │   │   │   └── ...
+│   │   │   ├── ios/
+│   │   │   │   └── ...
 │   │   └── ...
 │   ├── community/
 │   │   ├── frontend/
@@ -122,4 +127,3 @@ Para contribuir, por favor sigue las [guías de contribución](docs/CONTRIBUTING
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-```
