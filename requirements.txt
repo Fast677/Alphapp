@@ -1,4 +1,4 @@
 flask==2.2.5
 requests==2.32.2
-numpy==1.21.0
+numpy==1.22.0
 
