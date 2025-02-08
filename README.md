@@ -94,8 +94,8 @@ alphapp/
 
 ### Gestión de Dependencias
 
-- **Python**: `requirements.txt`
-- **Node.js**: `package.json`
+- **Python**: [`requirements.txt`](https://www.python.org/)
+- **Node.js**: [`package.json`](https://nodejs.org/)
 
 ### Convenciones de Nombres
 
@@ -105,11 +105,11 @@ alphapp/
 ### Comunicación y Roles
 
 - **Correos Electrónicos**: 
-  - `info@alphapp.xyz`: Fundación
-  - `soporte@alphapp.xyz`: Soporte
-  - `ventas@alphapp.xyz`: Tienda
-  - `devops@alphapp.xyz`: Automatización
-  - `community@alphapp.net`: Comunidad
+  - [info@alphapp.xyz](mailto:info@alphapp.xyz): Fundación
+  - [soporte@alphapp.xyz](mailto:soporte@alphapp.xyz): Soporte
+  - [ventas@alphapp.xyz](mailto:ventas@alphapp.xyz): Tienda
+  - [devops@alphapp.xyz](mailto:devops@alphapp.xyz): Automatización
+  - [community@alphapp.net](mailto:community@alphapp.net): Comunidad
 
 - **Roles**:
   - Desarrolladores frontend y backend
