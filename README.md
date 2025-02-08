@@ -6,16 +6,16 @@ Alphapp es una plataforma para desarrolladores que proporciona herramientas y re
 
 ### Dominios Principales
 
-- **alphapp.xyz**: Plataforma central de Alphapp que alberga los servicios principales y funcionalidades de software
-  - `api.alphapp.xyz`: Documentación de la API
-  - `cloud.alphapp.xyz`: Servicios en la nube
-  - `ml.alphapp.xyz`: Componentes de aprendizaje automático
-  - `store.alphapp.xyz`: Tienda de recursos
+- **[alphapp.xyz](https://alphapp.xyz)**: Plataforma central de Alphapp que alberga los servicios principales y funcionalidades de software
+  - **[api.alphapp.xyz](https://api.alphapp.xyz)**: Documentación de la API
+  - **[cloud.alphapp.xyz](https://cloud.alphapp.xyz)**: Servicios en la nube
+  - **[ml.alphapp.xyz](https://ml.alphapp.xyz)**: Componentes de aprendizaje automático
+  - **[store.alphapp.xyz](https://store.alphapp.xyz)**: Tienda de recursos
 
-- **alphapp.net**: Comunidad de desarrolladores y recursos de apoyo
-  - `docs.alphapp.net`: Documentación del proyecto
-  - `community.alphapp.net`: Foros y gestión de testers
-  - `resources.alphapp.net`: Directorio de recursos
+- **[alphapp.net](https://alphapp.net)**: Comunidad de desarrolladores y recursos de apoyo
+  - **[docs.alphapp.net](https://docs.alphapp.net)**: Documentación del proyecto
+  - **[community.alphapp.net](https://community.alphapp.net)**: Foros y gestión de testers
+  - **[resources.alphapp.net](https://resources.alphapp.net)**: Directorio de recursos
 
 ### Repositorios
 
