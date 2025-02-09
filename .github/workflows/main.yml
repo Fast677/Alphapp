@@ -9,9 +9,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Java JDK
-        uses: actions/setup-java@v4.7.0
-        with:
           # The Java version to configure. Accepts a full or partial Java version. See supported syntax examples in the README file
           java-version: # optional
           # The path to the `.java-version` file. See supported syntax examples in the README file
