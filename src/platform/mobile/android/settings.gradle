@@ -1,1 +1,6 @@
+rootProject.name = 'Alphapp'
+include ':app'
+
+// Si tienes otros módulos, puedes incluirlos de esta manera:
+// include ':module1', ':module2'
 
