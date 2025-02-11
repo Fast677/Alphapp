@@ -1,1 +1,11 @@
-
+<resources>
+    <string name="app_name">Alphapp</string>
+    <string name="welcome_message">Bienvenido a Alphapp</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <string name="signup_button">Registrarse</string>
+    <string name="home_title">Inicio</string>
+    <string name="profile_title">Perfil</string>
+    <string name="settings_title">Configuración</string>
+    <string name="logout_button">Cerrar Sesión</string>
+    <string name="error_message">Algo salió mal. Inténtalo de nuevo.</string>
+</resources>
