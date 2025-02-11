@@ -7,8 +7,12 @@
 # For more details, see
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
-# Add any project specific keep options here:
 
-# Example:
-# Keep the class and members of MyClass
-# -keep class com.example.MyClass { *; }
+# Mantén las anotaciones de la biblioteca de soporte de Android
+-keepattributes *Annotation*
+
+# Mantén los nombres de clases y métodos para las clases anotadas con @Keep
+-keep @androidx.annotation.Keep class * { *; }
+
+# Mantén los nombres de clases y métodos para las clases anotadas con @Keep en bibliotecas de terceros
+-keep @com.google.firebase.database.IgnoreExtraProperties class * { *; }
