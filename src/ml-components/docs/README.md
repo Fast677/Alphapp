@@ -86,7 +86,3 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 
 Si tienes alguna pregunta o sugerencia, puedes contactarnos a través de `devops@alphapp.xyz`.
 
-## Licencia
-
-Este proyecto está bajo la licencia [MIT License].
-
