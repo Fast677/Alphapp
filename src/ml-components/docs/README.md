@@ -88,5 +88,5 @@ Si tienes alguna pregunta o sugerencia, puedes contactarnos a través de `devops
 
 ## Licencia
 
-Este proyecto está bajo la licencia [MiT].
+Este proyecto está bajo la licencia [MIT License].
 
