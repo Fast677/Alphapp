@@ -50,7 +50,7 @@ def validate_password(password):
     if not re.search("[A-Z]", password):
         logging.error("Error: La contraseña debe tener al menos una letra mayúscula.")
         return False
-    if not re.search("[2-10]", password):
+    if not re.search("[0-9]", password):
         logging.error("Error: La contraseña debe tener al menos un número.")
         return False
     return True
