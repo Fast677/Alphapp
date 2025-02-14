@@ -38,20 +38,20 @@ def validate_password(password):
         bool: True si la contraseña es válida, False en caso contrario.
     """
     if not isinstance(password, str):
-      logging.error(f"Error: La contraseña debe ser una cadena de texto: {password}")
+      logging.error("Error: La contraseña debe ser una cadena de texto.")
       return False
 
     if len(password) < 8:
-        logging.error(f"Error: La contraseña debe tener al menos 8 caracteres: {password}")
+        logging.error("Error: La contraseña debe tener al menos 8 caracteres.")
         return False
     if not re.search("[a-z]", password):
-        logging.error(f"Error: La contraseña debe tener al menos una letra minúscula: {password}")
+        logging.error("Error: La contraseña debe tener al menos una letra minúscula.")
         return False
     if not re.search("[A-Z]", password):
-        logging.error(f"Error: La contraseña debe tener al menos una letra mayúscula: {password}")
+        logging.error("Error: La contraseña debe tener al menos una letra mayúscula.")
         return False
     if not re.search("[2-10]", password):
-        logging.error(f"Error: La contraseña debe tener al menos un número: {password}")
+        logging.error("Error: La contraseña debe tener al menos un número.")
         return False
     return True
 
