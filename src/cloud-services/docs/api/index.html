@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de la API de Servicios en la Nube de Alphapp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/redoc@2.0.0/redoc.min.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Documentación de la API de Servicios en la Nube de Alphapp</h1>
+         <p>Bienvenido a la documentación de la API de los servicios en la nube de Alphapp. Aquí encontrarás información detallada sobre cómo utilizar nuestros endpoints y las estructuras de datos asociadas.</p>
+       <p>Esta documentación es generada automáticamente utilizando <a href="https://github.com/Redocly/redoc">Redoc</a>, una herramienta para generar documentación a partir de archivos OpenAPI.</p>
+       <p>Para explorar la documentación de la API, haz clic en el siguiente enlace:</p>
+       <p><a href="redoc.html">Ver Documentación de la API</a></p>
+        <h2>Recursos Adicionales</h2>
+        <ul>
+            <li><a href="schemas/">Esquemas de Datos</a></li>
+            <li><a href="examples/">Ejemplos de Uso</a></li>
+            <li><a href="auth/">Documentación de Autenticación</a></li>
+           <li><a href="usage/">Guías de Uso</a></li>
 
+        </ul>
+
+    </div>
+     <redoc spec-url="./openapi.json"  ></redoc>
+     <script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0/redoc.standalone.js"></script>
+</body>
+</html>
