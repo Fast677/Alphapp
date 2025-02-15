@@ -1,1 +1,18 @@
+# Archivo de dependencias para el componente cloud-services de Alphapp
+#
+# Este archivo lista las dependencias de Python necesarias para ejecutar
+# los scripts y aplicaciones del componente.
+#
+# Para instalar las dependencias, ejecute:
+# pip install -r requirements.txt
 
+pandas
+requests
+python-dotenv
+django
+psycopg2-binary
+ Flask
+gunicorn
+logging
+subprocess
+os
