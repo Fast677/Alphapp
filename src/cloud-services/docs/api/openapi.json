@@ -1,1 +1,213 @@
-
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API de Servicios en la Nube de Alphapp",
+    "version": "1.0.0",
+    "description": "Documentación de la API para los servicios en la nube de Alphapp.",
+    "contact": {
+      "name": "Equipo de Soporte de Alphapp",
+      "email": "soporte@alphapp.xyz"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://cloud.alphapp.xyz/api/v1",
+      "description": "Servidor principal de la API"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Obtener la lista de usuarios",
+        "description": "Retorna una lista de todos los usuarios registrados.",
+        "responses": {
+          "200": {
+            "description": "Operación exitosa",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Crear un nuevo usuario",
+        "description": "Crea un nuevo usuario con la información proporcionada.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUser"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Usuario creado exitosamente",
+             "content": {
+              "application/json": {
+                "schema": {
+                   "$ref": "#/components/schemas/User"
+                }
+              }
+             }
+          }
+        }
+      }
+    },
+     "/users/{userId}": {
+        "get": {
+          "summary": "Obtener información de un usuario específico",
+          "description": "Retorna la información de un usuario en particular usando su ID.",
+           "parameters": [
+            {
+               "name": "userId",
+               "in": "path",
+               "required": true,
+               "description": "ID del usuario a obtener",
+               "schema": {
+                "type": "integer"
+                }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Operación exitosa",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+            },
+              "404": {
+                 "description": "Usuario no encontrado"
+                 }
+           }
+         },
+         "put": {
+            "summary": "Actualizar un usuario existente",
+            "description": "Actualiza la información de un usuario existente utilizando su ID.",
+             "parameters": [
+              {
+                 "name": "userId",
+                 "in": "path",
+                 "required": true,
+                 "description": "ID del usuario a actualizar",
+                  "schema": {
+                    "type": "integer"
+                   }
+               }
+            ],
+            "requestBody": {
+              "required": true,
+              "content": {
+                "application/json": {
+                   "schema": {
+                     "$ref": "#/components/schemas/UserUpdate"
+                     }
+                  }
+                }
+            },
+            "responses": {
+                "200": {
+                   "description": "Usuario actualizado exitosamente",
+                     "content": {
+                       "application/json": {
+                         "schema": {
+                            "$ref": "#/components/schemas/User"
+                            }
+                         }
+                        }
+                 },
+                   "404": {
+                     "description": "Usuario no encontrado"
+                     }
+               }
+           },
+          "delete": {
+            "summary": "Eliminar un usuario existente",
+             "description": "Elimina un usuario utilizando su ID.",
+            "parameters": [
+             {
+                "name": "userId",
+                 "in": "path",
+                "required": true,
+                 "description": "ID del usuario a eliminar",
+                  "schema": {
+                    "type": "integer"
+                  }
+                }
+             ],
+              "responses": {
+                 "204": {
+                   "description": "Usuario eliminado exitosamente"
+                    },
+                  "404": {
+                     "description": "Usuario no encontrado"
+                     }
+               }
+             }
+        }
+  },
+  "components": {
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "ID del usuario"
+          },
+          "name": {
+            "type": "string",
+            "description": "Nombre del usuario"
+          },
+          "email": {
+            "type": "string",
+            "description": "Correo electrónico del usuario"
+          }
+        }
+      },
+        "NewUser": {
+            "type": "object",
+             "properties": {
+               "name": {
+                  "type": "string",
+                  "description": "Nombre del usuario"
+                 },
+               "email": {
+                   "type": "string",
+                   "description": "Correo electrónico del usuario"
+                  }
+             },
+             "required": [
+                 "name",
+                 "email"
+               ]
+        },
+       "UserUpdate": {
+            "type": "object",
+             "properties": {
+               "name": {
+                  "type": "string",
+                  "description": "Nombre del usuario"
+                 },
+               "email": {
+                   "type": "string",
+                   "description": "Correo electrónico del usuario"
+                  }
+            }
+        }
+    }
+  }
+}
