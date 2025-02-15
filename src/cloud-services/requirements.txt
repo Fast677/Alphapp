@@ -1,15 +1,21 @@
-# Dependencias generales
-configparser
-requests
-pandas
-python-dotenv
+# cloud-services/requirements.txt
 
-# Dependencias específicas de la API (ejemplo)
-fastapi
-uvicorn
-
-# Dependencias de aprendizaje automático 
-tensorflow
-
-# Otras dependencias según sea necesario
-# psycopg2 para PostgreSQL, mysql-connector para MySQL
+# Dependencias base
+Flask==2.3.2         # Microframework para crear APIs y aplicaciones web
+requests==2.31.0      # Biblioteca para realizar peticiones HTTP
+python-dotenv==1.0.0   # Para cargar variables de entorno desde un archivo .env
+# Otras dependencias comunes
+SQLAlchemy==2.0.19   # ORM para interactuar con bases de datos
+psycopg2-binary==2.9.6 # Adaptador de PostgreSQL para Python 
+mysql-connector-python==8.0.30 # Adaptador de MySQL para Python 
+# Dependencias para seguridad
+bcrypt==4.0.1        # Para el hash de contraseñas
+# Dependencias para logging
+logging==0.4.96       # Biblioteca para registrar eventos y errores
+# Dependencias para pruebas
+pytest==7.2.1          # Framework para escribir y ejecutar pruebas unitarias
+# Dependencias para el manejo de datos
+pandas==2.0.3          # Biblioteca para análisis de datos 
+# Dependencias para la gestión de la nube 
+boto3==1.26.1        # SDK de AWS para Python 
+google-cloud-storage==2.6.0  # Biblioteca de Google Cloud Storage 
