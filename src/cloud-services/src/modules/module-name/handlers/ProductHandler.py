@@ -1,9 +1,12 @@
 # cloud-services/src/modules/module-name/handlers/ProductHandler.py
 from flask import Flask, request, jsonify
+import logging
 # Suponiendo que tienes un servicio para manejar la lógica de productos
 from . import product_service
 
 # Importa las dependencias necesarias, como Flask y cualquier servicio relacionado con productos
+
+logging.basicConfig(level=logging.ERROR)
 
 class ProductHandler:
     def __init__(self, product_service):
@@ -15,7 +18,8 @@ class ProductHandler:
             new_product = self.product_service.create_product(data)
             return jsonify(new_product), 201
         except Exception as e:
-            return jsonify({'error': str(e)}), 500
+            logging.error("Error creating product: %s", str(e))
+            return jsonify({'error': 'An internal error has occurred!'}), 500
 
     def get_product(self, product_id):
         try:
@@ -24,7 +28,8 @@ class ProductHandler:
                 return jsonify(product), 200
             return jsonify({'message': 'Producto no encontrado'}), 404
         except Exception as e:
-            return jsonify({'error': str(e)}), 500
+            logging.error("Error retrieving product: %s", str(e))
+            return jsonify({'error': 'An internal error has occurred!'}), 500
 
     def update_product(self, product_id):
         data = request.get_json()
@@ -34,7 +39,8 @@ class ProductHandler:
                 return jsonify(updated_product), 200
             return jsonify({'message': 'Producto no encontrado'}), 404
         except Exception as e:
-            return jsonify({'error': str(e)}), 500
+            logging.error("Error updating product: %s", str(e))
+            return jsonify({'error': 'An internal error has occurred!'}), 500
 
     def delete_product(self, product_id):
         try:
@@ -42,7 +48,8 @@ class ProductHandler:
                 return '', 204
             return jsonify({'message': 'Producto no encontrado'}), 404
         except Exception as e:
-            return jsonify({'error': str(e)}), 500
+            logging.error("Error deleting product: %s", str(e))
+            return jsonify({'error': 'An internal error has occurred!'}), 500
 
 # Ejemplo de uso dentro de una aplicación Flask
 app = Flask(__name__)
