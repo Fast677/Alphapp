@@ -1,1 +1,23 @@
-
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Authentication Request",
+  "description": "Esquema para la solicitud de autenticación a la API",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "description": "Nombre de usuario",
+      "minLength": 3,
+      "maxLength": 50
+    },
+    "password": {
+      "type": "string",
+      "description": "Contraseña",
+      "minLength": 8
+    }
+  },
+  "required": [
+    "username",
+    "password"
+  ]
+}
