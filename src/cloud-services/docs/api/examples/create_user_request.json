@@ -1,1 +1,7 @@
-
+{
+  "username": "nuevoUsuario",
+  "email": "nuevo.usuario@example.com",
+  "password": "ContraseñaSegura123",
+  "firstName": "Nuevo",
+  "lastName": "Usuario"
+}
