@@ -1,1 +1,32 @@
-
+# product.yaml
+type: object
+properties:
+  id:
+    type: integer
+    description: ID único del producto
+  name:
+    type: string
+    description: Nombre del producto
+    minLength: 3
+    maxLength: 100
+  description:
+    type: string
+    description: Descripción detallada del producto
+  price:
+    type: number
+    format: float
+    description: Precio del producto
+  image_url:
+    type: string
+    format: URL
+    description: URL de la imagen del producto
+  category:
+    type: string
+    description: Categoría del producto
+required:
+  - id
+  - name
+  - description
+  - price
+  - image_url
+  - category
