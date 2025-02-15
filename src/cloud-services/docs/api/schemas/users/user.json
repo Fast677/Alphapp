@@ -1,1 +1,16 @@
+// user.js
+const Joi = require('joi');
 
+const userSchema = Joi.object({
+  id: Joi.number().integer().description('ID único del usuario'),
+  username: Joi.string().min(3).max(50).required().description('Nombre de usuario'),
+  email: Joi.string().email().required().description('Correo electrónico'),
+  password: Joi.string().min(8).required().description('Contraseña'),
+  firstName: Joi.string().min(2).max(50).description('Nombre'),
+  lastName: Joi.string().min(2).max(50).description('Apellido'),
+  profileImage: Joi.string().uri().description('URL de la imagen de perfil'),
+  createdAt: Joi.date().description('Fecha de creación'),
+  updatedAt: Joi.date().description('Fecha de última actualización')
+});
+
+module.exports = userSchema;
