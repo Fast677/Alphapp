@@ -2,7 +2,7 @@
 
 # Dependencias base
 Flask==2.3.2         # Microframework para crear APIs y aplicaciones web
-requests==2.31.0      # Biblioteca para realizar peticiones HTTP
+requests==2.32.2      # Biblioteca para realizar peticiones HTTP
 python-dotenv==1.0.0   # Para cargar variables de entorno desde un archivo .env
 # Otras dependencias comunes
 SQLAlchemy==2.0.19   # ORM para interactuar con bases de datos
