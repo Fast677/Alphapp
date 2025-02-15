@@ -133,7 +133,6 @@ La API utiliza autenticación basada en tokens JWT (JSON Web Tokens). Para auten
 
 **Nota:** El token JWT debe incluirse en el encabezado `Authorization` de todas las solicitudes posteriores como `Bearer <token>`.
 
-```
 
 ### Explicación del código:
 
