@@ -1,1 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Cloud Services API for Alphapp
+  version: 1.0.0
+  description: API para acceder a los servicios en la nube de Alphapp.
 
+servers:
+  - url: https://cloud.alphapp.xyz/api/v1
+    description: Servidor principal de los servicios en la nube.
+
+paths:
+  /usuarios:
+    get:
+      summary: Obtiene la lista de usuarios.
+      description: Retorna una lista de todos los usuarios registrados.
+      responses:
+        '200':
+          description: Respuesta exitosa.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      description: ID del usuario.
+                    nombre:
+                      type: string
+                      description: Nombre del usuario.
+                    email:
+                      type: string
+                      description: Email del usuario.
+    post:
+      summary: Crea un nuevo usuario.
+      description: Crea un nuevo usuario con la información proporcionada.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                  description: Nombre del usuario.
+                email:
+                  type: string
+                  description: Email del usuario.
+      responses:
+        '201':
+          description: Usuario creado exitosamente.
+        '400':
+          description: Solicitud inválida.
+
+  /recursos:
+    get:
+      summary: Obtiene la lista de recursos disponibles.
+      description: Retorna una lista de los recursos disponibles en la nube.
+      responses:
+        '200':
+          description: Respuesta exitosa.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      description: ID del recurso.
+                    nombre:
+                      type: string
+                      description: Nombre del recurso.
+                    tipo:
+                      type: string
+                      description: Tipo de recurso.
+
+components:
+  schemas:
+    Usuario:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ID del usuario.
+        nombre:
+          type: string
+          description: Nombre del usuario.
+        email:
+          type: string
+          description: Email del usuario.
