@@ -7,7 +7,7 @@ python-dotenv==1.0.0   # Para cargar variables de entorno desde un archivo .env
 # Otras dependencias comunes
 SQLAlchemy==2.0.19   # ORM para interactuar con bases de datos
 psycopg2-binary==2.9.6 # Adaptador de PostgreSQL para Python 
-mysql-connector-python==8.0.30 # Adaptador de MySQL para Python 
+mysql-connector-python==9.1.0 # Adaptador de MySQL para Python 
 # Dependencias para seguridad
 bcrypt==4.0.1        # Para el hash de contraseñas
 # Dependencias para logging
