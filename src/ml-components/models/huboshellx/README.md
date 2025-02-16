@@ -1,10 +1,10 @@
 # Modelo Huboshellx
 
 ## Descripción General
-El modelo Huboshellx es un modelo de **TensorFlow** entrenado para [insertar descripción del propósito del modelo, por ejemplo: "clasificación de imágenes", "predicción de series temporales", "generación de texto", etc.]. Este modelo se integra en la plataforma Alphapp para [insertar cómo se utiliza el modelo en Alphapp, por ejemplo: "mejorar la precisión de la búsqueda", "personalizar la experiencia del usuario", "detectar anomalías", etc.].
+El modelo Huboshellx es un modelo de **TensorFlow** entrenado para clasificación de imágenes predicción de series temporales generación de texto etc. Este modelo se integra en la plataforma Alphapp para mejorar la precisión de la búsqueda personalizar la experiencia del usuario detectar anomalías etc.
 
 ## Arquitectura del Modelo
-El modelo Huboshellx se basa en una arquitectura de [insertar tipo de arquitectura, por ejemplo: "red neuronal convolucional", "red recurrente", "transformador", etc.]. 
+El modelo Huboshellx se basa en una arquitectura de red neuronal convolucional", "red recurrente", "transformador", etc.]. 
 *   **Capas:** [describir brevemente las capas principales del modelo]
 *   **Función de Activación:** [especificar la función de activación utilizada]
 *   **Función de Pérdida:** [indicar la función de pérdida utilizada durante el entrenamiento]
@@ -65,4 +65,4 @@ Al utilizar este modelo, tenga en cuenta las siguientes consideraciones de segur
 ## Licencia 
 
 ## Contacto
-Si tiene alguna pregunta o necesita ayuda para utilizar este modelo, póngase en contacto con [insertar dirección de correo electrónico o enlace a un foro de soporte].
+Si tiene alguna pregunta o necesita ayuda para utilizar este modelo, póngase en contacto con 
