@@ -1,21 +1,21 @@
 # Modelo Huboshellx
 
 ## Descripción General
-El modelo Huboshellx es un modelo de **TensorFlow** entrenado para clasificación de imágenes predicción de series temporales generación de texto etc. Este modelo se integra en la plataforma Alphapp para mejorar la precisión de la búsqueda personalizar la experiencia del usuario "detectar anomalías etc.
+El modelo Huboshellx es un modelo de **TensorFlow** entrenado para [insertar descripción del propósito del modelo, por ejemplo: "clasificación de imágenes", "predicción de series temporales", "generación de texto", etc.]. Este modelo se integra en la plataforma Alphapp para [insertar cómo se utiliza el modelo en Alphapp, por ejemplo: "mejorar la precisión de la búsqueda", "personalizar la experiencia del usuario", "detectar anomalías", etc.].
 
 ## Arquitectura del Modelo
-El modelo Huboshellx se basa en una arquitectura de ["red neuronal convolucional", "red recurrente", "transformador", etc.]. 
+El modelo Huboshellx se basa en una arquitectura de [insertar tipo de arquitectura, por ejemplo: "red neuronal convolucional", "red recurrente", "transformador", etc.]. 
 *   **Capas:** [describir brevemente las capas principales del modelo]
 *   **Función de Activación:** [especificar la función de activación utilizada]
 *   **Función de Pérdida:** [indicar la función de pérdida utilizada durante el entrenamiento]
-*   **Optimizador:** [Adam, SGD, etc.]
+*   **Optimizador:** [mencionar el optimizador utilizado, por ejemplo: Adam, SGD, etc.]
 
 ## Entrenamiento
 El modelo fue entrenado utilizando [insertar detalles sobre los datos de entrenamiento, por ejemplo: "un conjunto de datos de imágenes de [número] categorías", "datos de series temporales de [fuente]", "un corpus de texto de [tamaño]", etc.].
 *   **Datos de Entrenamiento:** Los datos de entrenamiento se encuentran en el directorio `data/`.
 *   **Script de Entrenamiento:** El script de Python utilizado para entrenar el modelo es `train_model.py` y se encuentra en el directorio `scripts/`.
 *   **Hiperparámetros:** Los hiperparámetros utilizados durante el entrenamiento se especifican en el archivo `config.json`.
-*   **Métricas:** Durante el entrenamiento, se monitorearon las siguientes métricas: ["precisión", "pérdida", "AUC", etc.]. La precisión alcanzada fue de [insertar valor].
+*   **Métricas:** Durante el entrenamiento, se monitorearon las siguientes métricas: [insertar métricas, por ejemplo: "precisión", "pérdida", "AUC", etc.]. La precisión alcanzada fue de [insertar valor].
 
 ## Uso
 Para utilizar el modelo Huboshellx, siga estos pasos:
@@ -59,10 +59,10 @@ Al utilizar este modelo, tenga en cuenta las siguientes consideraciones de segur
 *   **Validación de Entradas:** Asegúrese de validar y limpiar todas las entradas al modelo para evitar ataques de inyección.
 *   **Protección contra Adversarios:** Implemente defensas contra ataques adversarios que intenten engañar al modelo.
 *   **Monitoreo:** Supervise el rendimiento del modelo en producción para detectar anomalías o degradación.
+*   **Pruebas de seguridad:** Realice pruebas de seguridad específicas para los componentes de IA, incluyendo la evaluación de los modelos de TensorFlow.
+*   **Evaluaciones continuas:** Establezca pruebas, evaluaciones, verificaciones y validaciones continuas en todo el ciclo de vida del modelo de IA.
 
-## Licencia
-[Insertar información sobre la licencia del modelo]
+## Licencia 
 
 ## Contacto
 Si tiene alguna pregunta o necesita ayuda para utilizar este modelo, póngase en contacto con [insertar dirección de correo electrónico o enlace a un foro de soporte].
-
