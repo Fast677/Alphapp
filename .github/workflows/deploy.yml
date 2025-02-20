@@ -1,1 +1,53 @@
+name: Deploy to Production
 
+# Este flujo de trabajo se activará cuando se cree una nueva release.
+on:
+  release:
+    types: [published]
+
+# Definimos las variables de entorno que necesita este flujo de trabajo
+env:
+  # El nombre del entorno al que se desplegará la aplicación
+  DEPLOYMENT_ENVIRONMENT: production
+  # Clave SSH para acceder al servidor de despliegue
+  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+  # Usuario SSH para acceder al servidor de despliegue
+  SSH_USER: alphapp
+  # Host del servidor de despliegue
+  SSH_HOST: ${{ secrets.PRODUCTION_SERVER_IP }}
+  # Directorio en el servidor donde se desplegará la aplicación
+  DEPLOY_PATH: /var/www/alphapp/production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out el código fuente
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Configurar SSH para acceder al servidor
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # Construir la aplicación (si es necesario)
+      - name: Build application
+        run: |
+          echo "Construyendo la aplicación..."
+          # Aquí irían los comandos para construir la aplicación
+          # Por ejemplo: npm install, npm run build
+
+      # Desplegar la aplicación al servidor
+      - name: Deploy application
+        run: |
+          echo "Desplegando la aplicación en ${SSH_USER}@${SSH_HOST}:${DEPLOY_PATH}..."
+          # Aquí irían los comandos para copiar los archivos al servidor
+          # Por ejemplo: rsync -avz --delete ./dist/ ${SSH_USER}@${SSH_HOST}:${DEPLOY_PATH}
+          ssh -o StrictHostKeyChecking=no ${SSH_USER}@${SSH_HOST} "
+            cd ${DEPLOY_PATH} &&
+            # Aquí irían los comandos para reiniciar la aplicación
+            # Por ejemplo: docker-compose down && docker-compose up -d
+            echo 'Aplicación desplegada con éxito!'
