@@ -8,3 +8,4 @@ updates:
     directory: "/src/platform/backend"
     schedule:
       interval: "weekly"
+ 
