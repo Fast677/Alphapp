@@ -1,51 +1,25 @@
-name: Attest Build Provenance
-on: [push]
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-          # The Java version to configure. Accepts a full or partial Java version. See supported syntax examples in the README file
-          java-version: # optional
-          # The path to the `.java-version` file. See supported syntax examples in the README file
-          java-version-file: # optional
-          # Java distribution. See the list of supported distributions in the README file
-          distribution: # optional
-          # The package type (jdk, jre, jdk+fx, jre+fx)
-          java-package: # optional, default is jdk
-          # The architecture of the package (defaults to the architecture of the runner)
-          architecture: # optional
-          # Path where the compressed JDK is located
-          jdkFile: # optional
-          # Set this option if you want the action to look for the latest available version that meets the version specification.
-          check-latest: # optional
-          # ID of the distribution management repository in the pom.xml file. Default is `github`
-          server-id: # optional, default is github
-          # Name of the environment variable for the username for authentication to the Apache Maven repository. Default is $GITHUB_ACTOR
-          server-username: # optional, default is GITHUB_ACTOR
-          # Name of the environment variable for the password or token for authentication to the Apache Maven repository. Default is $GITHUB_TOKEN
-          server-password: # optional, default is GITHUB_TOKEN
-          # Path where the settings.xml file will be written. Default is ~/.m2.
-          settings-path: # optional
-          # Overwrite the settings.xml file if it exists. Default is "true".
-          overwrite-settings: # optional, default is true
-          # GPG private key to import. Default is an empty string.
-          gpg-private-key: # optional
-          # Name of the environment variable for the GPG private key password. Default is $GPG_PASSPHRASE.
-          gpg-passphrase: # optional
-          # Name of the build platform to cache dependencies. Can be "maven", "gradle", or "sbt".
-          cache: # optional
-          # The path to a dependency file: pom.xml, build.gradle, build.sbt, etc. This option can be used with the `cache` option. If this option is omitted, the action looks for the dependency file throughout the repository. This option supports wildcards and a list of file names to cache multiple dependencies.
-          cache-dependency-path: # optional
-          # Workaround to pass the job status to the post-job step. This variable is not intended for manual configuration
-          job-status: # optional, default is ${{ job.status }}
-          # The token used to authenticate when fetching version manifests hosted on github.com, such as for Microsoft Build of OpenJDK. When running this action on github.com, the default value is sufficient. When running on GHES, you can pass a personal access token for github.com if you experience rate limiting.
-          token: # optional, default is ${{ github.server_url == 'https://github.com' && github.token || '' }}
-          # Name of the Maven toolchain ID if the default name "${distribution}_${java-version}" is not desired. See supported syntax examples in the advanced usage file
-          mvn-toolchain-id: # optional
-          # Name of the Maven toolchain vendor if the default name "${distribution}" is not desired. See supported syntax examples in the advanced usage file
-          mvn-toolchain-vendor: # optional
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.9"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run tests with pytest
+      run: |
+        pytest
