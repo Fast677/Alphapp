@@ -1,1 +1,58 @@
+name: Code Analysis
 
+# Este flujo de trabajo se activará en cada push y pull request.
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  code_analysis:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout el código fuente
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Establecer Python (si es necesario para alguna herramienta de análisis)
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x' # o la versión que uses
+
+      # Instalar dependencias (si alguna herramienta lo requiere)
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Aquí irían las dependencias necesarias, por ejemplo:
+          # pip install pylint flake8
+
+      # Ejecutar análisis de código con Pylint (ejemplo para Python)
+      - name: Run Pylint
+        run: |
+          echo "Ejecutando Pylint..."
+          # Aquí irían los comandos para ejecutar Pylint
+          # pylint src/platform/backend/*.py
+
+      # Ejecutar análisis de código con ESLint (ejemplo para JavaScript)
+      - name: Run ESLint
+        run: |
+          echo "Ejecutando ESLint..."
+          # Aquí irían los comandos para ejecutar ESLint
+          # npm install -g eslint
+          # eslint src/platform/frontend/*.js
+
+      # Ejecutar análisis de seguridad con Bandit (ejemplo para Python)
+      - name: Run Bandit
+        run: |
+          echo "Ejecutando Bandit..."
+          # Aquí irían los comandos para ejecutar Bandit
+          # bandit -r src/platform/backend
+
+      # Subir resultados del análisis (opcional)
+      - name: Upload analysis results
+        if: always()
+        run: |
+          echo "Subiendo resultados del análisis..."
