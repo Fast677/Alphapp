@@ -1,4 +1,5 @@
 # Alphapp
+![Alphapp Logo](docs/assets/logos/alphapp-logo.svg)
 
 Alphapp es una plataforma para desarrolladores que proporciona herramientas y recursos para facilitar el desarrollo, la escalabilidad y el mantenimiento de proyectos de software.
 
